@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Contractor tools" />
+    <meta name="author" content="Dillon Plummer" />
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Ric's Kitchen & Bath | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -17,9 +17,10 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <!-- navbar-dark bg-dark -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Ric's Kitchen & Bath</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,18 +36,18 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#"
-                >Home
+                >Dashboard
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Calculator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Clients</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">Folders</a>
             </li>
           </ul>
         </div>
@@ -57,11 +58,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="mt-5">Calculations</h1>
+          <h1 class="my-5">Calculator</h1>
           <div class="row">
+            <!-- INCHES TO FEET -->
             <div class="col-6">
               <h3>Inches to Feet</h3>
-              <div class="row">
+              <div class="row mx-3 d-flex justify-content-center">
+                <!-- col-sm-8 col-md-6 -->
                 <div class="col-12">
                   <form>
                     <div class="form-group">
@@ -94,19 +97,68 @@
                     <p>
                       Length:
                     </p>
-                    <p id="inchesToFeetLengthResult" class="ml-2"></p>
+                    <p id="inchesToFeetLengthResult" class="ml-2">0</p>
+                    <p>'</p>
                   </div>
                   <div class="row mt-3">
                     <p>
                       Width:
                     </p>
-                    <p id="inchesToFeetWidthResult" class="ml-2"></p>
+                    <p id="inchesToFeetWidthResult" class="ml-2">0</p>
+                    <p>'</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6">
+
+            <!-- FEET TO INCHES -->
+            <div class="col-6 text-align-center">
               <h3>Feet to Inches</h3>
+              <div class="row mx-3 d-flex justify-content-center">
+                <div class="col-sm-8 col-md-6">
+                  <form>
+                    <div class="form-group">
+                      <label for="inputLength2">Length</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="inputLength2"
+                        placeholder="Length"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="inputWidth2">Width</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="inputWidth2"
+                        placeholder="Width"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onclick="return FeetToInches()"
+                    >
+                      Submit
+                    </button>
+                  </form>
+                  <div class="row mt-3">
+                    <p>
+                      Length:
+                    </p>
+                    <p id="feetToInchesLengthResult" class="ml-2">0</p>
+                    <p>"</p>
+                  </div>
+                  <div class="row mt-3">
+                    <p>
+                      Width:
+                    </p>
+                    <p id="feetToInchesWidthResult" class="ml-2">0</p>
+                    <p>"</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -117,8 +169,10 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <ul class="list-unstyled">
-            <li>Bootstrap 4.5.0</li>
-            <li>jQuery 3.5.1</li>
+            <li>CSLB No. 602812</li>
+            <br />
+            <li>&copy; Ric's Kitchen & Bath</li>
+            <li>All rights reserved.</li>
           </ul>
         </div>
       </div>
@@ -129,6 +183,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
+      // INCHES TO FEET FN
       function InchesToFeet() {
         // LENGTH CONVERSION
         let inputLength1 = document.getElementById("inputLength1").value;
@@ -148,6 +203,29 @@
         document.getElementById(
           "inchesToFeetWidthResult"
         ).innerHTML = widthResult1;
+        return false;
+      }
+
+      // FEET TO INCHES FN
+      function FeetToInches() {
+        // LENGTH CONVERSION
+        let inputLength2 = document.getElementById("inputLength2").value;
+        // for rounding:
+        // let lengthResult1 = Math.ceil(inputLength1 / 12);
+        let lengthResult2 = inputLength2 * 12;
+        document.getElementById(
+          "feetToInchesLengthResult"
+        ).innerHTML = lengthResult2;
+        // return false;
+
+        // WIDTH CONVERSION
+        let inputWidth2 = document.getElementById("inputWidth2").value;
+        // for rounding:
+        // let lengthResult1 = Math.ceil(inputLength1 / 12);
+        let widthResult2 = inputWidth2 * 12;
+        document.getElementById(
+          "feetToInchesWidthResult"
+        ).innerHTML = widthResult2;
         return false;
       }
     </script>

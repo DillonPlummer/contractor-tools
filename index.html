@@ -9,7 +9,7 @@
     <meta name="description" content="Contractor tools" />
     <meta name="author" content="Dillon Plummer" />
 
-    <title>Ric's Kitchen & Bath | Dashboard</title>
+    <title>Ric's Kitchen & Bath | Calculators</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -41,7 +41,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Calculator</a>
+              <a class="nav-link" href="#">Calculators</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Clients</a>
@@ -58,14 +58,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h1 class="my-5">Calculator</h1>
+          <h1 class="my-5">Calculators</h1>
           <div class="row">
             <!-- INCHES TO FEET -->
-            <div class="col-6">
+            <div class="col-md-6 py-3 border border-primary rounded">
               <h3>Inches to Feet</h3>
               <div class="row mx-3 d-flex justify-content-center">
-                <!-- col-sm-8 col-md-6 -->
-                <div class="col-12">
+                <div class="col-5">
                   <form>
                     <div class="form-group">
                       <label for="inputLength1">Length</label>
@@ -107,15 +106,24 @@
                     <p id="inchesToFeetWidthResult" class="ml-2">0</p>
                     <p>'</p>
                   </div>
+                  <div class="row mt-3">
+                    <p>
+                      Total SF:
+                    </p>
+                    <p id="totalSF" class="ml-2">0</p>
+                    <sup>&#9165;</sup>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- FEET TO INCHES -->
-            <div class="col-6 text-align-center">
+            <div
+              class="col-md-6 mt-5 py-2 text-align-center border border-primary rounded"
+            >
               <h3>Feet to Inches</h3>
               <div class="row mx-3 d-flex justify-content-center">
-                <div class="col-sm-8 col-md-6">
+                <div class="col-5">
                   <form>
                     <div class="form-group">
                       <label for="inputLength2">Length</label>
@@ -165,12 +173,11 @@
       </div>
     </div>
 
+    <!-- FOOTER -->
     <div class="container mt-5">
       <div class="row">
-        <div class="col-lg-12 text-center">
+        <div class="col footer text-center text-muted">
           <ul class="list-unstyled">
-            <li>CSLB No. 602812</li>
-            <br />
             <li>&copy; Ric's Kitchen & Bath</li>
             <li>All rights reserved.</li>
           </ul>
@@ -183,46 +190,48 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
-      // INCHES TO FEET FN
+      // INCHES TO FEET CALCULATION FN //
       function InchesToFeet() {
-        // LENGTH CONVERSION
+        // LENGTH CONVERSION //
         let inputLength1 = document.getElementById("inputLength1").value;
         // for rounding:
         // let lengthResult1 = Math.ceil(inputLength1 / 12);
-        let lengthResult1 = inputLength1 / 12;
+        let lengthResult1 = (inputLength1 / 12).toFixed(2);
         document.getElementById(
           "inchesToFeetLengthResult"
         ).innerHTML = lengthResult1;
-        // return false;
 
-        // WIDTH CONVERSION
+        // WIDTH CONVERSION //
         let inputWidth1 = document.getElementById("inputWidth1").value;
         // for rounding:
         // let lengthResult1 = Math.ceil(inputLength1 / 12);
-        let widthResult1 = inputWidth1 / 12;
+        let widthResult1 = (inputWidth1 / 12).toFixed(2);
         document.getElementById(
           "inchesToFeetWidthResult"
         ).innerHTML = widthResult1;
+
+        // SF CALCULATION //
+        let SFresult = (lengthResult1 * widthResult1).toFixed(2);
+        document.getElementById("totalSF").innerHTML = SFresult;
         return false;
       }
 
-      // FEET TO INCHES FN
+      // FEET TO INCHES CALCULATION FN //
       function FeetToInches() {
-        // LENGTH CONVERSION
+        // LENGTH CONVERSION //
         let inputLength2 = document.getElementById("inputLength2").value;
         // for rounding:
         // let lengthResult1 = Math.ceil(inputLength1 / 12);
-        let lengthResult2 = inputLength2 * 12;
+        let lengthResult2 = (inputLength2 * 12).toFixed(2);
         document.getElementById(
           "feetToInchesLengthResult"
         ).innerHTML = lengthResult2;
-        // return false;
 
-        // WIDTH CONVERSION
+        // WIDTH CONVERSION //
         let inputWidth2 = document.getElementById("inputWidth2").value;
         // for rounding:
         // let lengthResult1 = Math.ceil(inputLength1 / 12);
-        let widthResult2 = inputWidth2 * 12;
+        let widthResult2 = (inputWidth2 * 12).toFixed(2);
         document.getElementById(
           "feetToInchesWidthResult"
         ).innerHTML = widthResult2;

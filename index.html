@@ -9,7 +9,7 @@
     <meta name="description" content="Contractor tools" />
     <meta name="author" content="Dillon Plummer" />
 
-    <title>Ric's Kitchen & Bath | Calculators</title>
+    <title>Ric's Kitchen & Bath | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -176,13 +176,13 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h1 class="my-5">Dragging</h1>
-          <img src="http://placekitten.com/500/500" class="item" alt="kitten">
-          <!-- <div id="no-drop" class="drag-drop"> #no-drop </div>
+          <!-- <img src="http://placekitten.com/500/500" class="item" alt="kitten"> -->
+          <div id="no-drop" class="drag-drop"> #no-drop </div>
           <div id="yes-drop" class="drag-drop"> #yes-drop </div>
           <div id="outer-dropzone" class="dropzone">
             #outer-dropzone
             <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -202,20 +202,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="module">
-      import interact from
-      'https://cdn.interactjs.io/v1.9.22/interactjs/index.js'
-
-      interact('.item').draggable({
-        listeners: {
-          move (event) {
-            console.log(event.pageX,
-                        event.pageY)
-          }
-        }
-      })
-    </script> -->
     <script type="module" src="./drag-test.js"></script>
     <script src="./calculations.js"></script>
+    <script src="./kitten-drag.js"></script>
   </body>
 </html>

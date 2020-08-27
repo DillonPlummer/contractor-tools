@@ -31,7 +31,8 @@
     "dependencies": {
         "bootstrap": "4.5.0",
         "interactjs": "^1.9.22",
-        "jquery": "3.5.1"
+        "jquery": "3.5.1",
+        "pdf-lib": "^1.10.0"
     },
     "devDependencies": {
         "browser-sync": "^2.26.12",

@@ -1,5 +1,3 @@
-import interact from 'interactjs'
-
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({

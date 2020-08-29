@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ric's Kitchen & Bath | Floorplan Packet Creator</title>
+
+  <!-- CSS FILES -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./main.css" rel="stylesheet" />
+  <!-- <link href="./drag-test.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://dillonplummer.github.io/contractor-tools">Ric's Kitchen & Bath</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://dillonplummer.github.io/contractor-tools"
+              >Calculators
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./floorplan-packet-creator.html">Floorplan Packets</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="my-5 pb-5">Floorplan Packet Creator</h1>
+        <div class="container">
+          <div class="row mb-5">
+
+            <!-- FILE UPLOAD -->
+            <div class="col col-spacer"></div>
+            <div class="col-md-6 text-center">
+              <div class="input-group">
+                <div class="custom-file text-left">
+                  <input type="file" class="custom-file-input" id="inputGroupFile04">
+                  <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                  <button class="btn btn-brand" type="button">Upload</button>
+                </div>
+              </div>
+            </div>
+            <div class="col col-spacer"></div>
+
+            <div class="col-12 main-spacer"></div>
+
+            <!-- ICON LIST -->
+            <!-- <div class="col col-spacer"></div> -->
+            <div class="col-2 d-flex flex-column p-0">
+              <img src="http://www.placekitten.com/175" alt="">
+              <br>
+              <img src="http://www.placekitten.com/175" alt="">
+              <br>
+              <img src="http://www.placekitten.com/175" alt="">
+            </div>
+            <div class="col-10 col-spacer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer" class="container mt-5">
+    <div class="row">
+      <div class="col footer text-center text-muted">
+        <ul class="list-unstyled">
+          <li>&copy; Ric's Kitchen & Bath</li>
+          <li>All rights reserved.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script type="module" src="./drag-test.js"></script> -->
+  <!-- <script type="module" src="./kitten-drag.js"></script> -->
+  <script src="./calculations.js"></script>
+</body>
+</html>

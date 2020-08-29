@@ -1,5 +1,45 @@
+/* TABLET AND BIGGER */
 @media (min-width: 768px) {
   #inches-to-feet-wrapper {
     padding-top: 0px;
   }
+  /* .row-spacer {
+    display: none;
+  } */
+}
+
+/* UP UNTIL TABLET */
+@media (max-width: 767px) {
+  .col-spacer {
+    display: none;
+  }
+  .icon-tray-side {
+    display: none;
+  }
+}
+
+
+.navbar {
+  background: #1c366f;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: #e1e1e1;
+}
+
+.btn-brand {
+  background: #1c366f;
+  color: #fff;
+}
+
+.btn-brand:hover {
+  color: #e1e1e1;
+}
+
+.main-spacer {
+  height: 10vh;
 }
